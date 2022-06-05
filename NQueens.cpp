@@ -59,6 +59,11 @@ vector<vector<string>> solveNQueens(int n){
         board[i] = s; //filling board
     }
     solve(0,board,ans,n); // calling function
+    for(int i = 0; i<n; i++){
+        for(int j = 0; j<n; j++){
+            cout<<ans[i][j] <<endl;
+        }
+    }
     return ans;
 }
 
