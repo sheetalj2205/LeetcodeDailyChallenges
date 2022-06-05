@@ -39,23 +39,24 @@ bool isSafe(int row, int col, vector<string> board, int n){
 }
 void solve (int col, vector<string> &board, vector<vector<string>> &ans, int n){
     if(col == n){
-        ans.push_back(board);
+        ans.push_back(board); //base case when all columns are filled
+        return;
     }
     for(int row = 0; row<n; row++){
-    if(isSafe(row, col, board, n)){
+    if(isSafe(row, col, board, n)){ //check is it safe to place queen there or not
          board[row][col] = 'Q';
-         solve(col+1, board, ans, n);
-         board[row][col] = '.';
+         solve(col+1, board, ans, n); //recursion for next column
+         board[row][col] = '.'; //after coming back from recursion replace "Q" with "." and place "Q" in next row(as per the loop)
     }
     }
 }
 
 vector<vector<string>> solveNQueens(int n){
     vector<vector<string>> ans;  //ans
-    vector<string> board(n); 
-    string s (n, '.');
+    vector<string> board(n); //vector which has n strings of size n. Similarly like a chess board
+    string s (n, '.'); // string of size n which has n dots.
     for(int i=0; i<n; i++){
-        board[i] = s; //filling board(first row)
+        board[i] = s; //filling board
     }
     solve(0,board,ans,n); // calling function
     return ans;
