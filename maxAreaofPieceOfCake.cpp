@@ -25,12 +25,11 @@ int main(){
 int maxArea(int h, int w, vector<int>& hc, vector<int>& vc){
    //passing 42/56 cases this approach:  
    /*
-   1) Sort both the arrays\
-   2) Check the size of arrays\
-   3) If both are of size 1 then max area would be their product\
-   4) If one of them is of size 1 then check the diff bw that element and width or hight and get their max.\
-   5) If one of them is not of size 1 then simply find consecutive max diff and find their product.\
-
+   1) Sort both the arrays
+   2) Check the size of arrays
+   3) If both are of size 1 then max area would be their product
+   4) If one of them is of size 1 then check the diff bw that element and width or hight and get their max.
+   5) If one of them is not of size 1 then simply find consecutive max diff and find their product.
    */
   /*
         sort(hc.begin(), hc.end());
@@ -59,7 +58,7 @@ int maxArea(int h, int w, vector<int>& hc, vector<int>& vc){
         return hdiff*vdiff;
         */
 
-        /* To optimze this approach simply push 0 and height, \width to both the arrays then sort them and return the ans by modulo 10^9+7 and long long int doesn't support max and min functions so manually find greatest diff
+        /* To optimze this approach simply push 0 and height, width to both the arrays then sort them and return the ans by modulo 10^9+7 and long long int doesn't support max and min functions so manually find greatest diff
         */
         hc.push_back(0);
         hc.push_back(h);
