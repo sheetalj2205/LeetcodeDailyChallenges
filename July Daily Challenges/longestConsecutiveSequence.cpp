@@ -42,7 +42,7 @@ int longestSeq(vector<int> arr){
     Space complexity: unordered_set in C++ works in O(n) time in java it works in O(1) time.
     */
     set<int> s;
-    for(int i = 0; i<arr.size(); i++){
+    for(int i = 0; i<arr.size(); i++){ //this is not the faster method to insert elements in set, use: unordered_set<int> s(nums.begin(),nums.end()); this is faster
         s.insert(arr[i]);
     }
     int longestStreak = 0;
