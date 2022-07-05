@@ -1,7 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//Approach: use two vectors for left neighbour and right neighbour same as size of array and initialize them with 1, as left neighbour should be less than element so start loop from i=1 and check i-1 when arr[i-1] < arr[i] then add 1 to L_candy[i-1] ele to get L_candy[i], similary do for right neigbour start loop from i = n-2 to check its right neighbour i+1
+/*Approach: use two vectors for left neighbour and right neighbour same as size of array and initialize them with 1, as left neighbour should be less than element so start loop from i=1 and check i-1 when arr[i-1] < arr[i] then add 1 to L_candy[i-1] ele to get L_candy[i], similary do for right neigbour start loop from i = n-2 to check its right neighbour i+1
+
+Another approch: use peak and valley approach
+*/
 
 int minCandy(vector<int> &ratings);
 
