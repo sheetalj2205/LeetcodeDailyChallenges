@@ -14,6 +14,7 @@ struct Node{
 void levelOrder(Node* root);
 void preOrder(Node* root);
 int main(){
+    //create tree
     struct Node* root = new Node(3);
     root->left = new Node(9);
     root->right = new Node(20);
